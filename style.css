@@ -1,12 +1,61 @@
-body {
-    font-family: Arial, sans-serif;
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
+body {
+    font-family: Arial, "Microsoft JhengHei", sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+
+.todo-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+}
+
+.input-container, .filter-container {
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-shadow: none;
+    outline: none;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+    input:focus, select:focus, button:focus {
+        border-color: #007bff;
+        background-color: #fff;
+    }
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    width: auto;
+    padding: 10px;
+}
+    
+    button:hover {
+        background-color: #0056b3;
+    }
 
 ul {
     list-style-type: none;
@@ -15,10 +64,10 @@ ul {
 
 li {
     padding: 10px;
-    background: #f4f4f4;
-    margin-top: 5px;
+    border-bottom: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
     li.completed {
@@ -26,9 +75,11 @@ li {
         color: gray;
     }
 
-button {
-    background: red;
-    color: white;
-    border: none;
-    padding: 5px;
+.delete-button {
+    margin-left: 10px;
+    background-color: #dc3545;
 }
+    
+    .delete-button:hover {
+        background-color: #c82333;
+    }
