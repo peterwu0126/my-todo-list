@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List</title>
+    <title>To-Do List with Categories</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>To-Do List</h2>
-        <input type="text" id="taskInput" placeholder="Enter a new task">
-        <button onclick="addTask()">Add</button>
+    <div class="todo-container">
+        <h1>To-Do List</h1>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="輸入任務">
+            <select id="categorySelect">
+                <option value="Work">工作</option>
+                <option value="Personal">個人</option>
+                <option value="Study">學習</option>
+            </select>
+            <button id="addTaskButton">新增任務</button>
+        </div>
+        <div class="filter-container">
+            <select id="filterCategory">
+                <option value="All">所有</option>
+                <option value="Work">工作</option>
+                <option value="Personal">個人</option>
+                <option value="Study">學習</option>
+            </select>
+        </div>
         <ul id="taskList"></ul>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-
